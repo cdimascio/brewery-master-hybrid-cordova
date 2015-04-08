@@ -1,0 +1,60 @@
+
+        <div ng-controller="TweetPersonalityController">
+            <div ng-show="isLoading">Loading...</div>
+            <div ng-hide="isLoading">
+            <div ng-controller="UserModelResultController">
+                <div ng-show="isLoading">Loading...</div>
+                <div ng-show="error && isLoading === false">Sorry. Not enough information to sense the vibe.</div>
+                <div ng-show="!error && isLoading === false">
+                    <div class="row vibe">
+                        <div class="col-xs-6">
+                            <table class="table table-striped table-condensed">
+                                <thead>
+                                <tr>
+                                    <td ng-class="'pi-category'" colspan="2">{{categories['personality'].name}}</td>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr ng-repeat="item in categories['personality'].arr | limitTo:3">
+                                    <td>{{item.name}}&nbsp;&nbsp;</td>
+                                    <td>{{item.value}}%</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-xs-6">
+                            <table class="table table-striped table-condensed">
+                                <thead>
+                                <tr>
+                                    <td ng-class="'pi-category'" colspan="2">{{categories['needs'].name}}</td>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr ng-repeat="item in categories['needs'].arr | limitTo:3">
+                                    <td>{{item.name}}&nbsp;&nbsp;</td>
+                                    <td>{{item.value}}%</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <table class="table table-striped table-condensed">
+                                <thead>
+                                <tr>
+                                    <td ng-class="'pi-category'" colspan="2">{{categories['values'].name}}</td>
+                                </tr>
+                                </thead>
+                                <tr ng-repeat="item in categories['values'].arr | limitTo:3">
+                                    <td>{{item.name}}&nbsp;&nbsp;</td>
+                                    <td>{{item.value}}%</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+</div>

@@ -1,0 +1,118 @@
+<div ng-controller="MainController">
+    <!-- Wrap all page content here -->
+    <div id="wrap">
+
+        <header class="masthead">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h1><a href="#" title="Brewery Master">Brewery Master</a>
+
+                            <p class="lead">Beer and Breweries, cognitive style</p></h1>
+                    </div>
+                    <div class="col-sm-6">
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+        <!-- Fixed navbar -->
+        <div class="navbar navbar-custom navbar-inverse navbar-static-top" id="nav">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#nav-header-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#/home?page=search">Brewery Master</a>
+                </div>
+                <div class="collapse navbar-collapse" id="nav-header-collapse">>
+                    <ul class="nav navbar-nav">
+                        <li><a href="#/home?page=search"><strong>Search</strong></a></li>
+                        <li><a href="#/home?page=askwatson">Ask Watson</a></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+            <!--/.container -->
+        </div>
+
+        <!--/.navbar -->
+
+        <!-- Begin page content -->
+        <!--<a name="section1"></a>-->
+        <div id="mytop"></div>
+        <div class="divider" ></div>
+        <div id="search"  ng-show="page == 'search'">
+            <div ng-include="'app/parts/list.html'"></div>
+        </div>
+        <div  ng-show="page == 'brewery'">
+            <div ng-include="'app/parts/brewery.html'"></div>
+        </div>
+        <div ng-show="page == 'askwatson'">
+            <div ng-include="'app/parts/ask_waston.html'"></div>
+        </div>
+
+
+    </div>
+    <!--/wrap-->
+
+    <!-- Footer -->
+
+
+    <div id="footer" class="footer">
+        <div class="container">
+            <div ng-show="page == 'search'">
+                <div class="row">
+                    <div class="col-xs-12 flush-lr" style="text-align: center;">
+                        <button type="button" class="btn btn-default btn-wide" aria-label="Left Align"
+                                ng-click="showList()">
+                            <i class="fa fa-list fa-color fa-lg"></i>
+                        </button>
+
+                        <button type="button" class="btn btn-default btn-wide " aria-label="Left Align"
+                                ng-click="showaMap()">
+                            <i class="fa fa-map-marker fa-color fa-lg"></i>
+                        </button>
+                        <button type="button" class="btn btn-default btn-wide " aria-label="Left Align"
+                                ng-click="locate()">
+                            <i class="fa fa-location-arrow fa-color fa-lg"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div ng-show="page == 'brewery'">
+            <div class="row">
+                <div class="col-xs-12 " style="text-align: center;">
+                    <a type="button" class="btn btn-default btn-full-wide" aria-label="Left Align"
+                       onclick="history.go(-1);">
+                        <!--<div  class="fa-color">Back</div>-->
+                        <i class="fa fa-arrow-circle-left fa-color fa-lg"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div ng-show="page == 'askwatson'">
+            <div class="row">
+                <div class="col-xs-12 " style="text-align: center;">
+                    <a type="button" class="btn btn-default btn-full-wide" aria-label="Left Align"
+                       onclick="history.go(-1);">
+                        <i class="fa fa-arrow-circle-left fa-color fa-lg"></i>
+                        <!--<div  class="fa-color">Back</div>-->
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ul class="nav pull-right scroll-top">
+    <li><a href="#/home?page=search" title="Top"><i class="glyphicon glyphicon-chevron-up"></i></a></li>
+</ul>
+</div>

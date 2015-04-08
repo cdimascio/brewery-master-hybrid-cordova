@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.dimascio.brewery" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Brewery Master</name>
+    <description>
+        Brewery Master - beer, cognitive style
+    </description>
+    <author email="cdimascio@gmail.com" href="https://brewerymaster.mybluemix.net">
+        Carmine DiMascio
+    </author>
+    <content src="index.html"/>
+    <access origin="*"/>
+
+    <icon src="res/icon/logo.png"/>
+
+    <platform name="ios">
+        <!-- images are determined by width and height. The following are supported -->
+        <splash src="res/icon/logo.png" width="320" height="480"/>
+        <splash src="res/icon/logo.png" width="640" height="960"/>
+        <splash src="res/icon/logo.png" width="768" height="1024"/>
+        <splash src="res/icon/logo.png" width="1536" height="2048"/>
+        <splash src="res/icon/logo.png" width="1024" height="768"/>
+        <splash src="res/icon/logo.png" width="2048" height="1536"/>
+        <splash src="res/icon/logo.png" width="640" height="1136"/>
+        <splash src="res/icon/logo.png" width="750" height="1334"/>
+        <splash src="res/icon/logo.png" width="1242" height="2208"/>
+        <splash src="res/icon/logo.png" width="2208" height="1242"/>
+    </platform>
+
+    <feature name="Geolocation">-->
+        <param name="ios-package" value="CDVLocation" />
+    </feature>
+    <feature name="Geolocation">
+        <param name="android-package" value="org.apache.cordova.geolocation.GeoBroker" />
+    </feature>
+    <preference name="permissions" value="none"/>
+</widget>
+

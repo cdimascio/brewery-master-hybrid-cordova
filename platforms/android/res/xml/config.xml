@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.dimascio.brewery" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <preference name="loglevel" value="DEBUG" />
+    <name>Brewery Master</name>
+    <description>
+        Brewery Master - beer, cognitive style
+    </description>
+    <author email="cdimascio@gmail.com" href="http://brewerymaster.mybluemix.net">
+        Carmine DiMascio
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <icon src="res/icon/logo.png" />
+    <preference name="permissions" value="none" />
+</widget>
