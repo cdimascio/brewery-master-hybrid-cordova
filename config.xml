@@ -4,7 +4,7 @@
     <description>
         Brewery Master - beer, cognitive style
     </description>
-    <author email="cdimascio@gmail.com" href="https://brewerymaster.mybluemix.net">
+    <author email="cdimascio@gmail.com" href="http://brewerymaster.mybluemix.net">
         Carmine DiMascio
     </author>
     <content src="index.html"/>
@@ -26,12 +26,6 @@
         <splash src="res/icon/logo.png" width="2208" height="1242"/>
     </platform>
 
-    <feature name="Geolocation">-->
-        <param name="ios-package" value="CDVLocation" />
-    </feature>
-    <feature name="Geolocation">
-        <param name="android-package" value="org.apache.cordova.geolocation.GeoBroker" />
-    </feature>
+    <preference name="BackupWebStorage" value="local"/>
     <preference name="permissions" value="none"/>
 </widget>
-
